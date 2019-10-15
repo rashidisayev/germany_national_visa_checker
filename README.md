@@ -16,11 +16,11 @@ git clone https://github.com/rashidisayev/germany_national_visa_checker.git
 cd ~/Desktop/germany_national_visa_checker
 vi script.sh
 
-if grep  "<APPLICATION ID>" file.txt
+if grep  "APPLICATION ID" file.txt
 then
-   curl -s -X POST https://api.telegram.org/<BOT ID>/sendMessage -d chat_id=-<CHAT ID> -d text="VISA IS READY"
+   curl -s -X POST https://api.telegram.org/BOT ID/sendMessage -d chat_id=-CHAT ID -d text="VISA IS READY"
 else
-    curl -s -X POST https://api.telegram.org/<BOT ID>/sendMessage -d chat_id=-<CHAT ID> -d text="VISA IS NOT READY"
+    curl -s -X POST https://api.telegram.org/BOT ID/sendMessage -d chat_id=-CHAT ID -d text="VISA IS NOT READY"
 fi
 
 
