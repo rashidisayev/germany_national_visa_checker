@@ -25,10 +25,9 @@ fi
 
 
 
-##Usage
+## Usage
 
-cd ~/Desktop/germany_national_visa_checker
-chmod +x script.sh
-./script.sh
+cd ~/Desktop/germany_national_visa_checker && chmod +x script.sh && ./script.sh
+
 
 
