@@ -5,11 +5,12 @@ LINK=$(cat tmp_file|grep pdf-abholbereite-visa-neu-data.pdf|awk '{print $4}'|cut
 wget https://kiew.diplo.de$LINK
 pdftotext pdf-abholbereite-visa-neu-data.pdf file.txt
 rm -rf *.pdf
-if grep  "1911717" file.txt
+rm -rf tmp_file
+if grep  "APLICATION ID" file.txt
 then
-   curl -s -X POST https://api.telegram.org/bot981304592:AAEpTsvIwpF3LuegHIriAfpEBDLw1dEy3sc/sendMessage -d chat_id=-1001256638159 -d text="VISA IS READY"
+   curl -s -X POST https://api.telegram.org/BOT ID/sendMessage -d chat_id=-CHAT ID -d text="VISA IS READY"
 else
-    curl -s -X POST https://api.telegram.org/bot981304592:AAEpTsvIwpF3LuegHIriAfpEBDLw1dEy3sc/sendMessage -d chat_id=-1001256638159 -d text="VISA IS NOT READY"
+    curl -s -X POST https://api.telegram.org/BOT ID/sendMessage -d chat_id=-CHAT ID -d text="VISA IS NOT READY"
 fi
 rm -rf file.txt
 
